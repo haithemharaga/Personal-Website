@@ -1,0 +1,12 @@
+{
+  "name": "Haithem Haraga — Arcade & Portfolio",
+  "short_name": "HH Arcade",
+  "description": "Play 12 free browser games — Snake, 2048, Tetris, Minesweeper, Flappy and more. No downloads.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07050d",
+  "theme_color": "#a855f7",
+  "icons": [
+    { "src": "images/favicon.ico", "sizes": "64x64", "type": "image/x-icon" }
+  ]
+}

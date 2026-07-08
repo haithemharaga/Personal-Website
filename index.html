@@ -3,826 +3,591 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="images\favicon.ico">
+    <!-- ============ SEO / PRIMARY META ============ -->
+    <title>Free Online Browser Games — Snake, 2048, Tetris & More | Haithem Haraga</title>
+    <meta name="description" content="Play 12 free browser games — Snake, 2048, Tetris, Minesweeper, Flappy, Tic-Tac-Toe vs AI and more. No downloads, no sign-up, no ads. High scores save on your device. Built by developer Haithem Haraga.">
+    <meta name="keywords" content="free online games, browser games, play snake online, 2048 game, play tetris online, minesweeper online, flappy bird, tic tac toe vs ai, memory game, reaction test, HTML5 games, no download games, Haithem Haraga, web developer portfolio">
+    <meta name="author" content="Haithem Haraga">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#a855f7">
+    <link rel="canonical" href="https://haithemharaga.com/">
+    <!-- Google Search Console: replace CONTENT below with YOUR token from Search Console > Settings > Ownership verification > "HTML tag" -->
+    <meta name="google-site-verification" content="PASTE_YOUR_GOOGLE_VERIFICATION_TOKEN_HERE">
+
+    <!-- ============ OPEN GRAPH (Facebook, Discord, LinkedIn) ============ -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Haithem Haraga Arcade">
+    <meta property="og:title" content="Free Online Browser Games — Snake, 2048, Tetris & More">
+    <meta property="og:description" content="Play 12 free games right in your browser. No downloads, no ads. Snake, 2048, Tetris, Minesweeper, Flappy, Tic-Tac-Toe vs AI and more.">
+    <meta property="og:url" content="https://haithemharaga.com/">
+    <meta property="og:image" content="https://haithemharaga.com/images/og-image.png">
+    <meta property="og:image:alt" content="Haithem Haraga's black-and-purple browser game arcade">
+
+    <!-- ============ TWITTER CARD ============ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Online Browser Games — Snake, 2048, Tetris & More">
+    <meta name="twitter:description" content="12 free games, zero downloads. Play Snake, 2048, Tetris, Minesweeper, Flappy & more right in your browser.">
+    <meta name="twitter:image" content="https://haithemharaga.com/images/og-image.png">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ============ STRUCTURED DATA (JSON-LD) ============ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://haithemharaga.com/#website",
+          "url": "https://haithemharaga.com/",
+          "name": "Haithem Haraga Arcade",
+          "description": "Play 12 free browser games and explore the portfolio of developer Haithem Haraga.",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://haithemharaga.com/#person",
+          "name": "Haithem Haraga",
+          "jobTitle": "Software Developer",
+          "url": "https://haithemharaga.com/",
+          "sameAs": [
+            "https://github.com/haithemharaga",
+            "https://www.linkedin.com/in/haithem-haraga-268013192/"
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "name": "Free Browser Games",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "item": { "@type": "VideoGame", "name": "Neon Snake", "genre": "Arcade", "gamePlatform": "Web Browser", "applicationCategory": "Game", "operatingSystem": "Any" } },
+            { "@type": "ListItem", "position": 2, "item": { "@type": "VideoGame", "name": "2048", "genre": "Puzzle", "gamePlatform": "Web Browser", "applicationCategory": "Game", "operatingSystem": "Any" } },
+            { "@type": "ListItem", "position": 3, "item": { "@type": "VideoGame", "name": "Tetris", "genre": "Puzzle", "gamePlatform": "Web Browser", "applicationCategory": "Game", "operatingSystem": "Any" } },
+            { "@type": "ListItem", "position": 4, "item": { "@type": "VideoGame", "name": "Brick Breaker", "genre": "Arcade", "gamePlatform": "Web Browser", "applicationCategory": "Game", "operatingSystem": "Any" } },
+            { "@type": "ListItem", "position": 5, "item": { "@type": "VideoGame", "name": "Minesweeper", "genre": "Puzzle", "gamePlatform": "Web Browser", "applicationCategory": "Game", "operatingSystem": "Any" } },
+            { "@type": "ListItem", "position": 6, "item": { "@type": "VideoGame", "name": "Flappy Purple", "genre": "Arcade", "gamePlatform": "Web Browser", "applicationCategory": "Game", "operatingSystem": "Any" } }
+          ]
+        }
+      ]
+    }
+    </script>
     <style>
-        /* Global Styles */
+        /* ============ THEME ============ */
         :root {
-            --primary-color: #00e6ff;
-            --background-color: #0a0a0a;
-            --text-color: #f5f5f5;
-            --card-color: #121212;
-            --accent-color: #00e6ff;
-            --transition-speed: 0.3s;
+            --bg: #07050d;
+            --bg-2: #0d0819;
+            --card: #120a22;
+            --card-hi: #180e2e;
+            --primary: #a855f7;      /* purple */
+            --primary-2: #c026d3;    /* magenta-purple */
+            --neon: #b026ff;
+            --accent: #e879f9;       /* pink glow */
+            --text: #f3edff;
+            --muted: #a99fc7;
+            --line: #241640;
+            --glow: rgba(168, 85, 247, 0.45);
+            --transition: 0.3s;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; }
 
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: transparent;
-            color: var(--accent-color);
-            border: 2px solid var(--accent-color);
-            padding: 0.8rem 1.5rem;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: all var(--transition-speed) ease;
-            cursor: pointer;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-        }
-
-        .btn:hover {
-            background-color: var(--accent-color);
-            color: var(--background-color);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 230, 255, 0.3);
-        }
-
-        /* Header Styles */
-        header {
+        /* Animated aurora background layer */
+        body::before {
+            content: '';
             position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-            background-color: rgba(10, 10, 10, 0.85);
+            inset: 0;
+            z-index: -3;
+            background:
+                radial-gradient(60vw 60vw at 15% 10%, rgba(168,85,247,0.16), transparent 60%),
+                radial-gradient(50vw 50vw at 85% 20%, rgba(192,38,211,0.14), transparent 60%),
+                radial-gradient(70vw 70vw at 50% 100%, rgba(124,58,237,0.12), transparent 60%),
+                var(--bg);
+        }
+
+        #bg-canvas {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* Custom cursor glow */
+        #cursor-glow {
+            position: fixed;
+            width: 300px; height: 300px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            background: radial-gradient(circle, rgba(168,85,247,0.14), transparent 65%);
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s;
+            mix-blend-mode: screen;
+        }
+
+        /* ============ BUTTONS ============ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-2));
+            color: #fff;
+            border: none;
+            padding: 0.9rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 700;
+            transition: all var(--transition) ease;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            font-size: 0.95rem;
+            box-shadow: 0 8px 24px rgba(176,38,255,0.35);
+        }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(176,38,255,0.55); }
+        .btn.ghost {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--text);
+            box-shadow: none;
+        }
+        .btn.ghost:hover { background: rgba(168,85,247,0.12); box-shadow: 0 10px 24px var(--glow); }
+
+        /* ============ HEADER ============ */
+        header {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            backdrop-filter: blur(12px);
+            background: rgba(7, 5, 13, 0.7);
+            border-bottom: 1px solid transparent;
             transition: all 0.3s ease;
         }
-
-        header.scrolled {
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 0;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-
+        header.scrolled { border-bottom: 1px solid var(--line); box-shadow: 0 6px 30px rgba(0,0,0,0.6); }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 0; }
+        .logo { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.5px; }
         .logo span {
-            color: var(--text-color);
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
         }
-
-        .nav-menu {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-item {
-            position: relative;
-        }
-
-        .nav-link {
-            font-weight: 500;
-            transition: color var(--transition-speed) ease;
-        }
-
-        .nav-link:hover, .nav-link.active {
-            color: var(--primary-color);
-        }
-
+        .nav-menu { display: flex; gap: 2rem; align-items: center; }
+        .nav-link { font-weight: 600; font-size: 0.95rem; position: relative; transition: color var(--transition); }
+        .nav-link:hover, .nav-link.active { color: var(--accent); }
         .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary-color);
-            transition: width var(--transition-speed) ease;
+            content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--accent)); transition: width var(--transition);
         }
-
-        .nav-link:hover::after, .nav-link.active::after {
-            width: 100%;
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+        .nav-github {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 0.5rem 1rem; border-radius: 30px; border: 1px solid var(--line);
+            background: var(--card); font-weight: 600; font-size: 0.9rem; transition: all var(--transition);
         }
+        .nav-github:hover { border-color: var(--primary); box-shadow: 0 0 18px var(--glow); transform: translateY(-2px); color: var(--accent); }
+        .mobile-nav-toggle { display: none; background: transparent; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
 
-        .mobile-nav-toggle {
-            display: none;
-            background: transparent;
-            border: none;
-            color: var(--text-color);
-            font-size: 1.5rem;
-            cursor: pointer;
+        /* ============ HERO ============ */
+        .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 90px; position: relative; }
+        .hero-content { max-width: 860px; position: relative; z-index: 1; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 6px 16px; border-radius: 30px; border: 1px solid var(--line);
+            background: rgba(168,85,247,0.08); color: var(--accent); font-size: 0.85rem; font-weight: 600;
+            margin-bottom: 1.5rem; letter-spacing: 1px; text-transform: uppercase;
+            opacity: 0; animation: fadeUp 0.9s ease forwards 0.1s;
         }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 30% 50%, rgba(0, 230, 255, 0.1), transparent 50%);
-            z-index: -1;
-        }
-
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .hero-subtitle {
-            color: var(--primary-color);
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            opacity: 0;
-            animation: fadeInUp 1s ease forwards;
-            animation-delay: 0.2s;
-        }
-
+        .hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: #3ddc84; box-shadow: 0 0 10px #3ddc84; }
         .hero-title {
-            font-size: 4rem;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-            opacity: 0;
-            animation: fadeInUp 1s ease forwards;
-            animation-delay: 0.4s;
+            font-size: clamp(2.6rem, 7vw, 5rem); line-height: 1.05; font-weight: 900; margin-bottom: 1.3rem;
+            opacity: 0; animation: fadeUp 0.9s ease forwards 0.25s;
         }
-
+        .hero-title .grad {
+            background: linear-gradient(120deg, var(--primary) 0%, var(--accent) 50%, var(--primary-2) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+            animation: shine 5s linear infinite;
+        }
+        @keyframes shine { to { background-position: 200% center; } }
         .hero-description {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            opacity: 0;
-            animation: fadeInUp 1s ease forwards;
-            animation-delay: 0.6s;
+            font-size: 1.2rem; color: var(--muted); margin-bottom: 2.2rem; max-width: 620px;
+            opacity: 0; animation: fadeUp 0.9s ease forwards 0.4s;
         }
+        #typed { color: var(--accent); font-weight: 700; }
+        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.9s ease forwards 0.55s; }
+        .hero-stats { display: flex; gap: 40px; margin-top: 3rem; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.9s ease forwards 0.7s; }
+        .stat h3 { font-size: 2rem; font-weight: 800; color: var(--text); }
+        .stat p { font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
 
-        .hero-btn {
-            opacity: 0;
-            animation: fadeInUp 1s ease forwards;
-            animation-delay: 0.8s;
+        .scroll-indicator { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--muted); opacity: 0; animation: fadeIn 1s ease forwards 1.1s; }
+        .scroll-indicator i { font-size: 1.3rem; animation: bob 2s infinite; }
+
+        /* ============ SECTIONS ============ */
+        section.block { padding: 110px 0; position: relative; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: clamp(2rem, 5vw, 2.8rem); font-weight: 800; margin-bottom: 12px; }
+        .section-title h2 .grad {
+            background: linear-gradient(120deg, var(--primary), var(--accent));
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
         }
+        .section-title p { color: var(--muted); max-width: 640px; margin: 0 auto; }
 
-        .scroll-indicator {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            opacity: 0;
-            animation: fadeIn 1s ease forwards 1.2s;
+        /* ============ ARCADE ============ */
+        .arcade { background: linear-gradient(180deg, transparent, rgba(24,14,46,0.35), transparent); }
+        .arcade-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 26px; }
+        .game-card {
+            position: relative; background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+            padding: 30px 26px; cursor: pointer; overflow: hidden; transition: all var(--transition) ease;
+            opacity: 0; transform: translateY(30px);
         }
-
-        .scroll-indicator span {
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
+        .game-card.reveal { opacity: 1; transform: translateY(0); }
+        .game-card::after {
+            content: ''; position: absolute; inset: 0; border-radius: 20px; padding: 1px;
+            background: linear-gradient(135deg, var(--primary), transparent 40%, transparent 60%, var(--accent));
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor; mask-composite: exclude;
+            opacity: 0; transition: opacity var(--transition);
         }
-
-        .scroll-indicator i {
-            font-size: 1.5rem;
-            animation: scrollDown 2s infinite;
+        .game-card:hover { transform: translateY(-8px); background: var(--card-hi); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .game-card:hover::after { opacity: 1; }
+        .game-icon {
+            width: 64px; height: 64px; border-radius: 16px; display: flex; align-items: center; justify-content: center;
+            font-size: 2rem; margin-bottom: 18px;
+            background: linear-gradient(135deg, rgba(168,85,247,0.2), rgba(192,38,211,0.2));
+            border: 1px solid var(--line); box-shadow: 0 0 24px var(--glow);
         }
+        .game-card h3 { font-size: 1.3rem; margin-bottom: 8px; }
+        .game-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 16px; }
+        .game-meta { display: flex; align-items: center; justify-content: space-between; }
+        .game-hs { font-size: 0.8rem; color: var(--accent); font-weight: 600; }
+        .play-pill { display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 700; color: var(--primary); }
 
-        /* Projects Section */
-        .projects {
-            padding: 100px 0;
+        /* ============ GAME MODAL ============ */
+        .modal-overlay {
+            position: fixed; inset: 0; z-index: 2000; display: none;
+            align-items: center; justify-content: center; padding: 20px;
+            background: rgba(4,2,10,0.82); backdrop-filter: blur(8px);
         }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-            position: relative;
+        .modal-overlay.open { display: flex; animation: fadeIn 0.25s ease; }
+        .modal {
+            width: 100%; max-width: 640px; background: var(--bg-2);
+            border: 1px solid var(--line); border-radius: 22px; overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.7); animation: pop 0.3s ease;
         }
+        .modal-head { display: flex; align-items: center; justify-content: space-between; padding: 18px 22px; border-bottom: 1px solid var(--line); }
+        .modal-head h3 { font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
+        .modal-head .badge-tip { font-size: 0.75rem; color: var(--muted); font-weight: 500; }
+        .modal-close { background: transparent; border: none; color: var(--muted); font-size: 1.5rem; cursor: pointer; transition: color var(--transition); line-height: 1; }
+        .modal-close:hover { color: var(--accent); }
+        .modal-body { padding: 22px; }
+        .game-stage { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+        .score-bar { display: flex; gap: 30px; width: 100%; justify-content: center; font-weight: 700; }
+        .score-bar .lbl { color: var(--muted); font-weight: 500; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; display: block; }
+        .score-bar .val { font-size: 1.4rem; color: var(--accent); }
+        canvas.game-canvas { background: #0a0614; border-radius: 14px; border: 1px solid var(--line); max-width: 100%; touch-action: none; }
+        .game-hint { color: var(--muted); font-size: 0.85rem; text-align: center; }
+        .game-controls { display: flex; gap: 12px; }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
+        /* 2048 */
+        .g2048 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; background: #0a0614; padding: 12px; border-radius: 14px; border: 1px solid var(--line); width: 320px; height: 320px; }
+        .g2048 .tile { display: flex; align-items: center; justify-content: center; border-radius: 10px; font-weight: 800; font-size: 1.6rem; background: rgba(255,255,255,0.03); transition: all 0.12s ease; }
+        .t2 { background:#2a1a44 !important; color:#e6d8ff; } .t4 { background:#3a2260 !important; color:#efe4ff; }
+        .t8 { background:#6d28d9 !important; color:#fff; } .t16 { background:#7c3aed !important; color:#fff; }
+        .t32 { background:#9333ea !important; color:#fff; } .t64 { background:#a855f7 !important; color:#fff; }
+        .t128 { background:#c026d3 !important; color:#fff; font-size:1.4rem; } .t256 { background:#d029c6 !important; color:#fff; font-size:1.4rem; }
+        .t512 { background:#e879f9 !important; color:#1a0a2e; font-size:1.4rem; } .t1024 { background:#f0abfc !important; color:#1a0a2e; font-size:1.1rem; }
+        .t2048 { background:#fff !important; color:#7c3aed; box-shadow:0 0 24px var(--accent); }
+        @keyframes tilePop { 0%{transform:scale(0.6);} 100%{transform:scale(1);} }
+        .tile.spawn { animation: tilePop 0.15s ease; }
 
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
+        /* Memory */
+        .memory-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        .mem-card { width: 74px; height: 74px; perspective: 600px; cursor: pointer; }
+        .mem-inner { position: relative; width: 100%; height: 100%; transition: transform 0.4s; transform-style: preserve-3d; }
+        .mem-card.flipped .mem-inner, .mem-card.matched .mem-inner { transform: rotateY(180deg); }
+        .mem-face { position: absolute; inset: 0; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 2rem; backface-visibility: hidden; border: 1px solid var(--line); }
+        .mem-front { background: linear-gradient(135deg, var(--primary), var(--primary-2)); }
+        .mem-back { background: var(--card-hi); transform: rotateY(180deg); }
+        .mem-card.matched .mem-back { box-shadow: 0 0 18px var(--accent); }
 
-        .section-title p {
-            color: #aaa;
-            max-width: 700px;
-            margin: 0 auto;
-        }
+        /* Reaction */
+        .reaction-box { width: 100%; height: 300px; border-radius: 14px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.4rem; font-weight: 700; text-align: center; user-select: none; transition: background 0.1s; border: 1px solid var(--line); }
+        .rx-wait { background: #3a1010; color: #ffb4b4; }
+        .rx-ready { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; }
+        .rx-idle { background: var(--card); color: var(--muted); }
+        .rx-result { background: var(--card-hi); color: var(--text); }
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 30px;
-        }
-
+        /* ============ PROJECTS ============ */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 28px; }
         .project-card {
-            background-color: var(--card-color);
-            border-radius: 15px;
-            overflow: hidden;
-            transition: all var(--transition-speed) ease;
-            border: 1px solid #222;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            opacity: 0;
-            transform: translateY(30px);
+            background: var(--card); border-radius: 18px; overflow: hidden; border: 1px solid var(--line);
+            display: flex; flex-direction: column; transition: all var(--transition) ease; opacity: 0; transform: translateY(30px);
         }
+        .project-card.reveal { opacity: 1; transform: translateY(0); }
+        .project-card:hover { transform: translateY(-8px); border-color: rgba(168,85,247,0.5); box-shadow: 0 18px 44px rgba(0,0,0,0.5); }
+        .project-image { height: 190px; overflow: hidden; position: relative; background: linear-gradient(135deg, #1a0e33, #2a1050); display:flex; align-items:center; justify-content:center; }
+        .project-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .project-image .ph-icon { font-size: 3rem; color: rgba(232,121,249,0.5); }
+        .project-card:hover .project-image img { transform: scale(1.06); }
+        .project-content { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; }
+        .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+        .project-tag { background: rgba(168,85,247,0.12); color: var(--accent); padding: 4px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; }
+        .project-title { font-size: 1.35rem; margin-bottom: 12px; transition: color var(--transition); }
+        .project-card:hover .project-title { color: var(--accent); }
+        .project-description { color: var(--muted); margin-bottom: 20px; flex-grow: 1; font-size: 0.95rem; }
+        .project-links { display: flex; gap: 18px; margin-top: auto; }
+        .project-link { display: flex; align-items: center; gap: 6px; font-weight: 600; font-size: 0.9rem; color: var(--text); transition: all var(--transition); }
+        .project-link:hover { color: var(--accent); transform: translateX(3px); }
 
-        .project-card.reveal {
-            opacity: 1;
-            transform: translateY(0);
+        /* ============ CONTACT ============ */
+        .contact { background: linear-gradient(180deg, transparent, rgba(24,14,46,0.3)); }
+        .contact-container { display: flex; flex-wrap: wrap; gap: 50px; }
+        .contact-info { flex: 1; min-width: 300px; }
+        .contact-info h3 { font-size: 1.9rem; margin-bottom: 18px; }
+        .contact-info p { margin-bottom: 28px; color: var(--muted); }
+        .contact-links { display: flex; gap: 16px; margin-bottom: 30px; }
+        .contact-link { width: 52px; height: 52px; border-radius: 14px; background: var(--card); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; border: 1px solid var(--line); transition: all var(--transition); }
+        .contact-link:hover { background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #fff; transform: translateY(-5px); box-shadow: 0 10px 24px var(--glow); }
+        .contact-form { flex: 1; min-width: 300px; }
+        .form-group { margin-bottom: 18px; }
+        .form-input { width: 100%; padding: 15px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); color: var(--text); font-family: inherit; transition: all var(--transition); }
+        .form-input::placeholder { color: #6d6389; }
+        .form-input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(168,85,247,0.18); }
+        textarea.form-input { min-height: 150px; resize: vertical; }
+        .form-btn { width: 100%; justify-content: center; }
+        .form-note { margin-top: 14px; font-size: 0.85rem; color: var(--accent); display: none; }
+
+        /* ============ FOOTER ============ */
+        footer { padding: 40px 0; text-align: center; border-top: 1px solid var(--line); }
+        .footer-content { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+        .footer-links { display: flex; gap: 22px; }
+        .footer-link { color: var(--muted); transition: color var(--transition); }
+        .footer-link:hover { color: var(--accent); }
+        .copyright { color: #6d6389; font-size: 0.88rem; }
+        .easter-hint { color: #3a2f5a; font-size: 0.75rem; }
+
+        /* Toast */
+        #toast {
+            position: fixed; bottom: 26px; left: 50%; transform: translateX(-50%) translateY(120px);
+            background: var(--card-hi); border: 1px solid var(--primary); color: var(--text);
+            padding: 14px 24px; border-radius: 40px; font-weight: 600; z-index: 3000;
+            box-shadow: 0 10px 30px var(--glow); transition: transform 0.4s cubic-bezier(.2,1.2,.3,1);
         }
+        #toast.show { transform: translateX(-50%) translateY(0); }
 
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 230, 255, 0.2);
-            border-color: rgba(0, 230, 255, 0.3);
-        }
+        /* ============ ANIMATIONS ============ */
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes pop { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
 
-        .project-image {
-            height: 200px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .project-card:hover .project-image img {
-            transform: scale(1.05);
-        }
-
-        .project-content {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        .project-tag {
-            background-color: rgba(0, 230, 255, 0.1);
-            color: var(--primary-color);
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .project-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            transition: color var(--transition-speed) ease;
-        }
-
-        .project-card:hover .project-title {
-            color: var(--primary-color);
-        }
-
-        .project-description {
-            color: #bbb;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 15px;
-            margin-top: auto;
-        }
-
-        .project-link {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-weight: 500;
-            color: var(--text-color);
-            transition: all var(--transition-speed) ease;
-        }
-
-        .project-link:hover {
-            color: var(--primary-color);
-            transform: translateX(3px);
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 100px 0;
-            background-color: rgba(18, 18, 18, 0.5);
-        }
-
-        .contact-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 50px;
-        }
-
-        .contact-info {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .contact-info h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .contact-info p {
-            margin-bottom: 30px;
-            color: #bbb;
-        }
-
-        .contact-links {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
-        .contact-link {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: var(--card-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all var(--transition-speed) ease;
-            color: var(--text-color);
-            font-size: 1.5rem;
-            border: 1px solid #222;
-        }
-
-        .contact-link:hover {
-            background-color: var(--primary-color);
-            color: var(--background-color);
-            transform: translateY(-5px);
-        }
-
-        .contact-form {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 15px;
-            border-radius: 10px;
-            background-color: var(--card-color);
-            border: 1px solid #222;
-            color: var(--text-color);
-            font-family: inherit;
-            transition: all var(--transition-speed) ease;
-        }
-
-        .form-input::placeholder {
-            color: #777;
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 2px rgba(0, 230, 255, 0.2);
-        }
-
-        textarea.form-input {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .form-btn {
-            background-color: var(--primary-color);
-            color: var(--background-color);
-            border: none;
-            width: 100%;
-        }
-
-        .form-btn:hover {
-            background-color: var(--primary-color);
-            opacity: 0.9;
-        }
-
-        /* Footer */
-        footer {
-            padding: 30px 0;
-            text-align: center;
-            border-top: 1px solid #222;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .footer-link {
-            position: relative;
-            transition: color var(--transition-speed) ease;
-        }
-
-        .footer-link:hover {
-            color: var(--primary-color);
-        }
-
-        .copyright {
-            color: #777;
-            font-size: 0.9rem;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes scrollDown {
-            0% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            50% {
-                transform: translateY(10px);
-                opacity: 0.5;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* Media Queries */
-        @media (max-width: 992px) {
-            .hero-title {
-                font-size: 3.5rem;
-            }
-
-            .projects-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
+        /* ============ RESPONSIVE ============ */
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.8rem;
-            }
-
-            .hero-description {
-                font-size: 1.1rem;
-            }
-
             .nav-menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                max-width: 400px;
-                height: 100vh;
-                background-color: var(--card-color);
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 3rem;
-                transition: right 0.4s ease;
-                z-index: 1001;
-                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+                position: fixed; top: 0; right: -100%; width: 78%; max-width: 360px; height: 100vh;
+                background: var(--bg-2); flex-direction: column; justify-content: center; gap: 2.4rem;
+                transition: right 0.4s ease; z-index: 1001; box-shadow: -10px 0 40px rgba(0,0,0,0.6);
             }
-
-            .nav-menu.active {
-                right: 0;
-            }
-
-            .nav-link {
-                font-size: 1.2rem;
-            }
-
-            .mobile-nav-toggle {
-                display: block;
-                z-index: 1002;
-            }
-
-            .mobile-nav-toggle.active {
-                position: fixed;
-                right: 20px;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title h2 {
-                font-size: 2rem;
-            }
+            .nav-menu.active { right: 0; }
+            .mobile-nav-toggle { display: block; z-index: 1002; }
+            .mobile-nav-toggle.active { position: fixed; right: 20px; }
+            .hero-stats { gap: 26px; }
         }
-
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 2.2rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-
-            .hero-description {
-                font-size: 1rem;
-            }
-
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
+        @media (prefers-reduced-motion: reduce) {
+            * { animation-duration: 0.001s !important; }
         }
     </style>
 </head>
 <body>
+    <canvas id="bg-canvas"></canvas>
+    <div id="cursor-glow"></div>
+
     <!-- Header -->
     <header>
         <div class="container">
             <nav class="navbar">
                 <div class="logo">Haithem<span> Haraga</span></div>
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
-                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                    <li class="nav-item"><a href="C:\Users\mnemosyne\Desktop\programming\website\CV NEW.pdf" class="nav-link">CV</a></li>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#arcade" class="nav-link">Arcade</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="CV NEW.pdf" target="_blank" class="nav-link">CV</a></li>
+                    <li><a href="https://github.com/haithemharaga" target="_blank" class="nav-github"><i class="fab fa-github"></i> GitHub</a></li>
                 </ul>
-                <button class="mobile-nav-toggle">
-                    <i class="fas fa-bars"></i>
-                </button>
+                <button class="mobile-nav-toggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-subtitle">Developer & Designer </div>
-                <h1 class="hero-title">Haithem Haraga</h1>
+                <span class="hero-badge"><span class="dot"></span> Available for work</span>
+                <h1 class="hero-title">Hi, I'm <span class="grad">Haithem</span><br>I build <span class="grad">&amp; break</span> things.</h1>
                 <p class="hero-description">
-                    I'm a passionate software developer specializing in building exceptional digital experiences. 
-                    My focus is on creating elegant solutions with clean, efficient code.
+                    Software developer crafting clean, elegant web experiences — and the occasional <span id="typed"></span>
                 </p>
-                <a href="#projects" class="btn hero-btn">View My Work</a>
+                <div class="hero-actions">
+                    <a href="#arcade" class="btn"><i class="fas fa-gamepad"></i> Play the Arcade</a>
+                    <a href="https://github.com/haithemharaga" target="_blank" class="btn ghost"><i class="fab fa-github"></i> View GitHub</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><h3>12</h3><p>Playable Games</p></div>
+                    <div class="stat"><h3>∞</h3><p>Lines of Code</p></div>
+                    <div class="stat"><h3>100%</h3><p>Pure Vanilla JS</p></div>
+                </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <span>Scroll Down</span>
-            <i class="fas fa-chevron-down"></i>
+        <a href="#arcade" class="scroll-indicator"><span>Scroll</span><i class="fas fa-chevron-down"></i></a>
+    </section>
+
+    <!-- Arcade -->
+    <section id="arcade" class="block arcade">
+        <div class="container">
+            <div class="section-title">
+                <h2>The <span class="grad">Arcade</span> 🎮</h2>
+                <p>Play <strong>free browser games</strong> — Snake, 2048, Tetris, Minesweeper, Flappy, Tic-Tac-Toe vs AI and more. No downloads, no sign-up, no ads. Click a cabinet and play instantly; your high scores save on your device.</p>
+            </div>
+            <div class="arcade-grid" id="arcade-grid">
+                <div class="game-card" data-game="snake">
+                    <div class="game-icon">🐍</div>
+                    <h3>Neon Snake</h3>
+                    <p>Slither, eat, grow. Don't bite yourself. A neon-purple twist on the classic.</p>
+                    <div class="game-meta"><span class="game-hs" data-hs="snake">Best: 0</span><span class="play-pill">Play <i class="fas fa-play"></i></span></div>
+                </div>
+                <div class="game-card" data-game="g2048">
+                    <div class="game-icon">🔢</div>
+                    <h3>2048</h3>
+                    <p>Slide the tiles, merge the numbers, chase that legendary 2048 tile.</p>
+                    <div class="game-meta"><span class="game-hs" data-hs="g2048">Best: 0</span><span class="play-pill">Play <i class="fas fa-play"></i></span></div>
+                </div>
+                <div class="game-card" data-game="breakout">
+                    <div class="game-icon">🧱</div>
+                    <h3>Brick Breaker</h3>
+                    <p>Bounce the ball, smash every brick. Move your paddle with mouse or keys.</p>
+                    <div class="game-meta"><span class="game-hs" data-hs="breakout">Best: 0</span><span class="play-pill">Play <i class="fas fa-play"></i></span></div>
+                </div>
+                <div class="game-card" data-game="memory">
+                    <div class="game-icon">🧠</div>
+                    <h3>Memory Match</h3>
+                    <p>Flip cards, find the pairs. Fewer moves = bigger brain. Beat your record.</p>
+                    <div class="game-meta"><span class="game-hs" data-hs="memory">Best: —</span><span class="play-pill">Play <i class="fas fa-play"></i></span></div>
+                </div>
+                <div class="game-card" data-game="reaction">
+                    <div class="game-icon">⚡</div>
+                    <h3>Reaction Test</h3>
+                    <p>Wait for purple, then click FAST. How quick are your reflexes, really?</p>
+                    <div class="game-meta"><span class="game-hs" data-hs="reaction">Best: — ms</span><span class="play-pill">Play <i class="fas fa-play"></i></span></div>
+                </div>
+                <div class="game-card" data-game="tetris">
+                    <div class="game-icon">🟪</div>
+                    <h3>Tetris</h3>
+                    <p>Stack the falling blocks, clear lines, chase the top score. Speeds up as you go.</p>
+                    <div class="game-meta"><span class="game-hs" data-hs="tetris">Best: 0</span><span class="play-pill">Play <i class="fas fa-play"></i></span></div>
+                </div>
+                <div class="game-card" data-game="flappy">
+                    <div class="game-icon">🐤</div>
+                    <h3>Flappy Purple</h3>
+                    <p>Tap to flap, dodge the pipes. One tiny mistake and it's over. Highly addictive.</p>
+                    <div class="game-meta"><span class="game-hs" data-hs="flappy">Best: 0</span><span class="play-pill">Play <i class="fas fa-play"></i></span></div>
+                </div>
+                <div class="game-card" data-game="mines">
+                    <div class="game-icon">💣</div>
+                    <h3>Minesweeper</h3>
+                    <p>Clear the field without hitting a mine. Flag what you fear. Beat your best time.</p>
+                    <div class="game-meta"><span class="game-hs" data-hs="mines">Best: —</span><span class="play-pill">Play <i class="fas fa-play"></i></span></div>
+                </div>
+                <div class="game-card" data-game="ttt">
+                    <div class="game-icon">⭕</div>
+                    <h3>Tic-Tac-Toe</h3>
+                    <p>You're X vs an unbeatable minimax AI. Can you force a draw? (You can't lose to yourself.)</p>
+                    <div class="game-meta"><span class="game-hs" data-hs="ttt">Wins: 0</span><span class="play-pill">Play <i class="fas fa-play"></i></span></div>
+                </div>
+                <div class="game-card" data-game="simon">
+                    <div class="game-icon">🎵</div>
+                    <h3>Simon Says</h3>
+                    <p>Watch the colour-and-sound pattern, then repeat it. It grows every round. How far?</p>
+                    <div class="game-meta"><span class="game-hs" data-hs="simon">Best: Lv 0</span><span class="play-pill">Play <i class="fas fa-play"></i></span></div>
+                </div>
+                <div class="game-card" data-game="whack">
+                    <div class="game-icon">👾</div>
+                    <h3>Whack-a-Mole</h3>
+                    <p>Smash as many moles as you can in 30 seconds. They get faster. Reflexes required.</p>
+                    <div class="game-meta"><span class="game-hs" data-hs="whack">Best: 0</span><span class="play-pill">Play <i class="fas fa-play"></i></span></div>
+                </div>
+                <div class="game-card" data-game="secret" style="opacity:.6">
+                    <div class="game-icon">❓</div>
+                    <h3>???</h3>
+                    <p>There's a hidden bonus somewhere on this page. Try the Konami code... ↑↑↓↓←→←→BA</p>
+                    <div class="game-meta"><span class="game-hs">Locked</span><span class="play-pill">Secret <i class="fas fa-lock"></i></span></div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- Projects -->
+    <section id="projects" class="block">
         <div class="container">
             <div class="section-title">
-                <h2>Featured Projects</h2>
-                <p>A selection of my recent coding projects showcasing my skills and expertise.</p>
+                <h2>Featured <span class="grad">Projects</span></h2>
+                <p>A selection of things I've built. More on my GitHub.</p>
             </div>
             <div class="projects-grid">
-                <!-- Project 1 -->
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="images\Capture.PNG" alt="Project 1">
-                    </div>
+                    <div class="project-image"><img src="images/Capture.PNG" alt="Task Manager"></div>
                     <div class="project-content">
-                        <div class="project-tags">
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">Node.js</span>
-                            <span class="project-tag">MongoDB</span>
-                        </div>
+                        <div class="project-tags"><span class="project-tag">React</span><span class="project-tag">Node.js</span><span class="project-tag">MongoDB</span></div>
                         <h3 class="project-title">Task Management App</h3>
-                        <p class="project-description">
-                            A full-stack task management application with real-time updates, user authentication, and mobile responsiveness.
-                        </p>
+                        <p class="project-description">A full-stack task manager with real-time updates, user auth, and a responsive UI.</p>
                         <div class="project-links">
-                            <a href="https://github.com/haithemharaga/task-manager-app-but-looks-good" target="_blank" class="project-link">
-                                <i class="fas fa-code"></i> View Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
+                            <a href="https://github.com/haithemharaga/task-manager-app-but-looks-good" target="_blank" class="project-link"><i class="fas fa-code"></i> Code</a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project 2 -->
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="/api/placeholder/500/300" alt="Project 2">
-                    </div>
+                    <div class="project-image"><span class="ph-icon"><i class="fas fa-store"></i></span></div>
                     <div class="project-content">
-                        <div class="project-tags">
-                            <span class="project-tag">Vue.js</span>
-                            <span class="project-tag">Firebase</span>
-                            <span class="project-tag">TailwindCSS</span>
-                        </div>
+                        <div class="project-tags"><span class="project-tag">Vue.js</span><span class="project-tag">Firebase</span><span class="project-tag">Tailwind</span></div>
                         <h3 class="project-title">E-commerce Platform</h3>
-                        <p class="project-description">
-                            A modern e-commerce platform with product filtering, shopping cart functionality, and secure payment processing.
-                        </p>
+                        <p class="project-description">A modern storefront with product filtering, cart, and secure checkout.</p>
                         <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-code"></i> View Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
+                            <a href="https://github.com/haithemharaga/-E-commerce-firebase" target="_blank" class="project-link"><i class="fas fa-code"></i> Code</a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project 3 -->
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="/api/placeholder/500/300" alt="Project 3">
-                    </div>
+                    <div class="project-image"><span class="ph-icon"><i class="fas fa-gamepad"></i></span></div>
                     <div class="project-content">
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Django</span>
-                            <span class="project-tag">PostgreSQL</span>
+                        <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag">Canvas</span><span class="project-tag">HTML5</span></div>
+                        <h3 class="project-title">This Arcade ⬆️</h3>
+                        <p class="project-description">The 5 games above are hand-built in vanilla JS &amp; the Canvas API — no engines, no libraries.</p>
+                        <div class="project-links">
+                            <a href="#arcade" class="project-link"><i class="fas fa-play"></i> Play Now</a>
+                            <a href="https://github.com/haithemharaga" target="_blank" class="project-link"><i class="fab fa-github"></i> More</a>
                         </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"><span class="ph-icon"><i class="fas fa-chart-line"></i></span></div>
+                    <div class="project-content">
+                        <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">Django</span><span class="project-tag">PostgreSQL</span></div>
                         <h3 class="project-title">Content Management System</h3>
-                        <p class="project-description">
-                            A robust CMS with custom workflows, role-based permissions, and advanced content organization features.
-                        </p>
+                        <p class="project-description">A robust CMS with custom workflows and role-based permissions.</p>
                         <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-code"></i> View Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/api/placeholder/500/300" alt="Project 4">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">Canvas API</span>
-                            <span class="project-tag">WebGL</span>
-                        </div>
-                        <h3 class="project-title">Interactive Data Visualization</h3>
-                        <p class="project-description">
-                            An interactive visualization tool for exploring complex datasets with intuitive controls and exportable insights.
-                        </p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-code"></i> View Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 5 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/api/placeholder/500/300" alt="Project 5">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="project-tag">TypeScript</span>
-                            <span class="project-tag">React Native</span>
-                            <span class="project-tag">GraphQL</span>
-                        </div>
-                        <h3 class="project-title">Fitness Tracking Mobile App</h3>
-                        <p class="project-description">
-                            A cross-platform mobile application for tracking fitness goals, workout routines, and nutrition with personalized recommendations.
-                        </p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-code"></i> View Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 6 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/api/placeholder/500/300" alt="Project 6">
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="project-tag">Go</span>
-                            <span class="project-tag">Docker</span>
-                            <span class="project-tag">Kubernetes</span>
-                        </div>
-                        <h3 class="project-title">Microservices Architecture</h3>
-                        <p class="project-description">
-                            A scalable microservices architecture implementing best practices for deployment, monitoring, and service discovery.
-                        </p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-code"></i> View Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Live Demo
-                            </a>
+                            <a href="https://github.com/haithemharaga" target="_blank" class="project-link"><i class="fas fa-code"></i> Code</a>
                         </div>
                     </div>
                 </div>
@@ -830,42 +595,31 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Contact -->
+    <section id="contact" class="block contact">
         <div class="container">
             <div class="section-title">
-                <h2>Get In Touch</h2>
-                <p>Have a project in mind or want to collaborate? Feel free to reach out.</p>
+                <h2>Get In <span class="grad">Touch</span></h2>
+                <p>Got a project, an idea, or just beat my high score? Let me know.</p>
             </div>
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Let's talk about your project</h3>
-                    <p>
-                        I'm always open to new opportunities and exciting projects. 
-                        Whether you have a question or just want to say hi, I'll get back to you as soon as possible.
-                    </p>
+                    <h3>Let's build something.</h3>
+                    <p>I'm always open to new opportunities and fun projects. Drop a message and I'll get back to you.</p>
                     <div class="contact-links">
-                        <a href="https://github.com/haithemharaga" class="contact-link"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/haithem-haraga-268013192/" class="contact-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="contact-link"><i class="fab fa-twitter"></i></a>
-                        <a href="haithemharaga@yahoo.co.uk" target="_blank" class="contact-link"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/haithemharaga" target="_blank" class="contact-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/haithem-haraga-268013192/" target="_blank" class="contact-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:haithemharaga@yahoo.co.uk" class="contact-link" title="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-input" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-input" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-input" placeholder="Subject">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-input" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn form-btn">Send Message</button>
+                    <form id="contact-form">
+                        <div class="form-group"><input type="text" class="form-input" placeholder="Your Name" required></div>
+                        <div class="form-group"><input type="email" class="form-input" placeholder="Your Email" required></div>
+                        <div class="form-group"><input type="text" class="form-input" placeholder="Subject"></div>
+                        <div class="form-group"><textarea class="form-input" placeholder="Your Message" required></textarea></div>
+                        <button type="submit" class="btn form-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+                        <p class="form-note" id="form-note">Thanks! This is a demo form — reach me on GitHub or email instead. 💜</p>
                     </form>
                 </div>
             </div>
@@ -879,116 +633,770 @@
                 <div class="logo">Haithem<span> Haraga</span></div>
                 <div class="footer-links">
                     <a href="#home" class="footer-link">Home</a>
+                    <a href="#arcade" class="footer-link">Arcade</a>
                     <a href="#projects" class="footer-link">Projects</a>
-                    <a href="#contact" class="footer-link">Contact</a>
+                    <a href="https://github.com/haithemharaga" target="_blank" class="footer-link"><i class="fab fa-github"></i> GitHub</a>
                 </div>
-                <div class="copyright">
-                    &copy; 2025 haithem-haraga. All rights reserved. :3
-                </div>
+                <div class="copyright">&copy; 2026 Haithem Haraga — Built with 💜 and vanilla JS.</div>
+                <div class="easter-hint">psst… try the Konami code, or press <b>P</b> to toggle particles.</div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Game Modal -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal">
+            <div class="modal-head">
+                <h3 id="modal-title">Game</h3>
+                <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+        </div>
+    </div>
+
+    <div id="toast"></div>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile Navigation Toggle
-            const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-            
-            mobileNavToggle.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-                this.classList.toggle('active');
-                this.innerHTML = this.classList.contains('active') 
-                    ? '<i class="fas fa-times"></i>' 
-                    : '<i class="fas fa-bars"></i>';
+    (function () {
+        'use strict';
+
+        /* ============ UTIL ============ */
+        const $ = (s, r = document) => r.querySelector(s);
+        const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+        const store = {
+            get: (k, d) => { try { const v = localStorage.getItem('hh_' + k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+            set: (k, v) => { try { localStorage.setItem('hh_' + k, JSON.stringify(v)); } catch {} }
+        };
+        let toastTimer;
+        function toast(msg) {
+            const t = $('#toast'); t.textContent = msg; t.classList.add('show');
+            clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('show'), 2600);
+        }
+
+        /* ============ NAV ============ */
+        const header = $('header');
+        const navMenu = $('.nav-menu');
+        const toggle = $('.mobile-nav-toggle');
+        toggle.addEventListener('click', () => {
+            const open = navMenu.classList.toggle('active');
+            toggle.classList.toggle('active', open);
+            toggle.innerHTML = open ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        $$('.nav-link').forEach(l => l.addEventListener('click', () => {
+            navMenu.classList.remove('active'); toggle.classList.remove('active'); toggle.innerHTML = '<i class="fas fa-bars"></i>';
+        }));
+        const sections = $$('section');
+        const navLinks = $$('.nav-link');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 40);
+            let cur = '';
+            sections.forEach(s => { if (scrollY >= s.offsetTop - 220) cur = s.id; });
+            navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + cur));
+        });
+
+        /* Smooth scroll */
+        $$('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+            const t = $(a.getAttribute('href'));
+            if (t) { e.preventDefault(); window.scrollTo({ top: t.offsetTop - 70, behavior: 'smooth' }); }
+        }));
+
+        /* ============ REVEAL ON SCROLL ============ */
+        const io = new IntersectionObserver(es => es.forEach(en => {
+            if (en.isIntersecting) { en.target.classList.add('reveal'); io.unobserve(en.target); }
+        }), { threshold: 0.15 });
+        $$('.project-card, .game-card').forEach((c, i) => { c.style.transitionDelay = (i % 6 * 60) + 'ms'; io.observe(c); });
+
+        /* ============ TYPED SUBTITLE ============ */
+        const words = ['browser game.', 'weird side project.', 'pixel-perfect UI.', 'clever hack.', 'high score.'];
+        const typedEl = $('#typed');
+        let wi = 0, ci = 0, del = false;
+        (function type() {
+            const w = words[wi];
+            typedEl.textContent = w.slice(0, ci);
+            if (!del && ci < w.length) ci++;
+            else if (del && ci > 0) ci--;
+            else if (!del) { del = true; setTimeout(type, 1400); return; }
+            else { del = false; wi = (wi + 1) % words.length; }
+            setTimeout(type, del ? 45 : 85);
+        })();
+
+        /* ============ CURSOR GLOW ============ */
+        const glow = $('#cursor-glow');
+        let hasFine = window.matchMedia('(pointer:fine)').matches;
+        if (hasFine) {
+            window.addEventListener('pointermove', e => {
+                glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px';
             });
-            
-            // Close mobile menu when clicking on a nav link
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                    mobileNavToggle.classList.remove('active');
-                    mobileNavToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        } else { glow.style.display = 'none'; }
+
+        /* ============ PARTICLE BACKGROUND ============ */
+        const bg = $('#bg-canvas'), bx = bg.getContext('2d');
+        let particles = [], pW, pH, pAnim, particlesOn = store.get('particles', true);
+        function resizeBg() { pW = bg.width = innerWidth; pH = bg.height = innerHeight; }
+        function initParticles() {
+            const n = Math.min(90, Math.floor(pW * pH / 22000));
+            particles = Array.from({ length: n }, () => ({
+                x: Math.random() * pW, y: Math.random() * pH,
+                vx: (Math.random() - 0.5) * 0.35, vy: (Math.random() - 0.5) * 0.35,
+                r: Math.random() * 1.8 + 0.6
+            }));
+        }
+        function drawParticles() {
+            bx.clearRect(0, 0, pW, pH);
+            for (let i = 0; i < particles.length; i++) {
+                const p = particles[i];
+                p.x += p.vx; p.y += p.vy;
+                if (p.x < 0 || p.x > pW) p.vx *= -1;
+                if (p.y < 0 || p.y > pH) p.vy *= -1;
+                bx.beginPath(); bx.arc(p.x, p.y, p.r, 0, 7); bx.fillStyle = 'rgba(200,150,255,0.6)'; bx.fill();
+                for (let j = i + 1; j < particles.length; j++) {
+                    const q = particles[j], dx = p.x - q.x, dy = p.y - q.y, d = dx * dx + dy * dy;
+                    if (d < 13000) {
+                        bx.beginPath(); bx.moveTo(p.x, p.y); bx.lineTo(q.x, q.y);
+                        bx.strokeStyle = 'rgba(168,85,247,' + (0.14 * (1 - d / 13000)) + ')'; bx.lineWidth = 1; bx.stroke();
+                    }
+                }
+            }
+            pAnim = requestAnimationFrame(drawParticles);
+        }
+        function startParticles() { cancelAnimationFrame(pAnim); if (particlesOn) drawParticles(); else bx.clearRect(0, 0, pW, pH); }
+        resizeBg(); initParticles(); startParticles();
+        addEventListener('resize', () => { resizeBg(); initParticles(); });
+        addEventListener('keydown', e => {
+            if (e.key.toLowerCase() === 'p' && !/input|textarea/i.test(document.activeElement.tagName) && !modalOpen) {
+                particlesOn = !particlesOn; store.set('particles', particlesOn); startParticles();
+                toast(particlesOn ? 'Particles on ✨' : 'Particles off');
+            }
+        });
+
+        /* ============ CONTACT FORM ============ */
+        $('#contact-form').addEventListener('submit', e => { e.preventDefault(); $('#form-note').style.display = 'block'; e.target.reset(); });
+
+        /* ============ HIGH SCORES ============ */
+        function refreshHS() {
+            $('[data-hs="snake"]').textContent = 'Best: ' + store.get('hs_snake', 0);
+            $('[data-hs="g2048"]').textContent = 'Best: ' + store.get('hs_g2048', 0);
+            $('[data-hs="breakout"]').textContent = 'Best: ' + store.get('hs_breakout', 0);
+            const m = store.get('hs_memory', 0); $('[data-hs="memory"]').textContent = m ? 'Best: ' + m + ' moves' : 'Best: —';
+            const r = store.get('hs_reaction', 0); $('[data-hs="reaction"]').textContent = r ? 'Best: ' + r + ' ms' : 'Best: — ms';
+            $('[data-hs="tetris"]').textContent = 'Best: ' + store.get('hs_tetris', 0);
+            $('[data-hs="flappy"]').textContent = 'Best: ' + store.get('hs_flappy', 0);
+            const ms = store.get('hs_mines', 0); $('[data-hs="mines"]').textContent = ms ? 'Best: ' + ms + 's' : 'Best: —';
+            $('[data-hs="ttt"]').textContent = 'Wins: ' + store.get('ttt_w', 0);
+            $('[data-hs="simon"]').textContent = 'Best: Lv ' + store.get('hs_simon', 0);
+            $('[data-hs="whack"]').textContent = 'Best: ' + store.get('hs_whack', 0);
+        }
+        refreshHS();
+
+        /* ============ MODAL + GAME ENGINE ============ */
+        const modal = $('#modal'), modalBody = $('#modal-body'), modalTitle = $('#modal-title');
+        let currentCleanup = null, modalOpen = false;
+        const titles = { snake: '🐍 Neon Snake', g2048: '🔢 2048', breakout: '🧱 Brick Breaker', memory: '🧠 Memory Match', reaction: '⚡ Reaction Test', tetris: '🟪 Tetris', flappy: '🐤 Flappy Purple', mines: '💣 Minesweeper', ttt: '⭕ Tic-Tac-Toe (vs AI)', simon: '🎵 Simon Says', whack: '👾 Whack-a-Mole' };
+
+        function openGame(key) {
+            if (!GAMES[key]) return;
+            modalTitle.textContent = titles[key] || 'Game';
+            modalBody.innerHTML = '';
+            modal.classList.add('open'); modalOpen = true;
+            currentCleanup = GAMES[key](modalBody) || null;
+        }
+        function closeGame() {
+            if (currentCleanup) { try { currentCleanup(); } catch {} currentCleanup = null; }
+            modal.classList.remove('open'); modalOpen = false; modalBody.innerHTML = ''; refreshHS();
+        }
+        $$('.game-card').forEach(c => c.addEventListener('click', () => {
+            const g = c.dataset.game;
+            if (g === 'secret') { toast('🔒 Use the Konami code: ↑↑↓↓←→←→BA'); return; }
+            openGame(g);
+        }));
+        $('#modal-close').addEventListener('click', closeGame);
+        modal.addEventListener('click', e => { if (e.target === modal) closeGame(); });
+        addEventListener('keydown', e => { if (e.key === 'Escape' && modalOpen) closeGame(); });
+
+        /* helper to build the standard stage */
+        function stage(root, { scores = [], hint = '', controls = [] }) {
+            const wrap = document.createElement('div'); wrap.className = 'game-stage';
+            if (scores.length) {
+                const bar = document.createElement('div'); bar.className = 'score-bar';
+                scores.forEach(s => { const d = document.createElement('div'); d.style.textAlign = 'center';
+                    d.innerHTML = '<span class="lbl">' + s.label + '</span><span class="val" id="' + s.id + '">' + s.value + '</span>'; bar.appendChild(d); });
+                wrap.appendChild(bar);
+            }
+            const mount = document.createElement('div'); mount.className = 'game-mount'; mount.style.display = 'flex'; mount.style.justifyContent = 'center'; mount.style.width = '100%';
+            wrap.appendChild(mount);
+            if (hint) { const h = document.createElement('div'); h.className = 'game-hint'; h.innerHTML = hint; wrap.appendChild(h); }
+            if (controls.length) {
+                const cc = document.createElement('div'); cc.className = 'game-controls';
+                controls.forEach(c => { const b = document.createElement('button'); b.className = 'btn ghost'; b.innerHTML = c.label; b.onclick = c.onClick; cc.appendChild(b); });
+                wrap.appendChild(cc);
+            }
+            root.appendChild(wrap);
+            return { wrap, mount };
+        }
+
+        const GAMES = {};
+
+        /* ---------- SNAKE ---------- */
+        GAMES.snake = function (root) {
+            const CELL = 20, COLS = 20, ROWS = 20, W = CELL * COLS, H = CELL * ROWS;
+            const { mount } = stage(root, {
+                scores: [{ label: 'Score', id: 's-score', value: '0' }, { label: 'Best', id: 's-best', value: store.get('hs_snake', 0) }],
+                hint: 'Arrow keys / WASD to steer • swipe on mobile',
+                controls: [{ label: '<i class="fas fa-redo"></i> Restart', onClick: () => reset() }]
+            });
+            const cv = document.createElement('canvas'); cv.className = 'game-canvas'; cv.width = W; cv.height = H; mount.appendChild(cv);
+            const c = cv.getContext('2d');
+            let snake, dir, nextDir, food, score, dead, timer, speed;
+
+            function reset() {
+                snake = [{ x: 10, y: 10 }, { x: 9, y: 10 }, { x: 8, y: 10 }];
+                dir = { x: 1, y: 0 }; nextDir = dir; score = 0; dead = false; speed = 110;
+                placeFood(); $('#s-score').textContent = 0; loop();
+            }
+            function placeFood() {
+                do { food = { x: (Math.random() * COLS) | 0, y: (Math.random() * ROWS) | 0 }; }
+                while (snake.some(s => s.x === food.x && s.y === food.y));
+            }
+            function step() {
+                dir = nextDir;
+                const head = { x: snake[0].x + dir.x, y: snake[0].y + dir.y };
+                if (head.x < 0 || head.x >= COLS || head.y < 0 || head.y >= ROWS || snake.some(s => s.x === head.x && s.y === head.y)) { gameOver(); return; }
+                snake.unshift(head);
+                if (head.x === food.x && head.y === food.y) {
+                    score += 10; $('#s-score').textContent = score; placeFood();
+                    speed = Math.max(60, speed - 2);
+                } else snake.pop();
+                draw();
+            }
+            function draw() {
+                c.fillStyle = '#0a0614'; c.fillRect(0, 0, W, H);
+                c.fillStyle = '#e879f9'; c.shadowColor = '#e879f9'; c.shadowBlur = 12;
+                c.beginPath(); c.arc(food.x * CELL + CELL / 2, food.y * CELL + CELL / 2, CELL / 2 - 3, 0, 7); c.fill();
+                c.shadowBlur = 14; c.shadowColor = '#a855f7';
+                snake.forEach((s, i) => {
+                    c.fillStyle = i === 0 ? '#c084fc' : 'hsl(' + (270 + i * 2 % 40) + ',80%,' + (65 - Math.min(i, 20)) + '%)';
+                    c.fillRect(s.x * CELL + 1.5, s.y * CELL + 1.5, CELL - 3, CELL - 3);
                 });
+                c.shadowBlur = 0;
+            }
+            function loop() { clearTimeout(timer); if (dead) return; step(); if (!dead) timer = setTimeout(loop, speed); }
+            function gameOver() {
+                dead = true; clearTimeout(timer);
+                const best = store.get('hs_snake', 0);
+                if (score > best) { store.set('hs_snake', score); $('#s-best').textContent = score; toast('🏆 New best: ' + score + '!'); }
+                c.fillStyle = 'rgba(7,5,13,0.82)'; c.fillRect(0, 0, W, H);
+                c.fillStyle = '#fff'; c.textAlign = 'center'; c.font = '700 30px Inter, sans-serif';
+                c.fillText('Game Over', W / 2, H / 2 - 10);
+                c.font = '500 16px Inter, sans-serif'; c.fillStyle = '#a99fc7';
+                c.fillText('Score ' + score + ' — press Restart', W / 2, H / 2 + 22);
+            }
+            function key(e) {
+                const k = e.key.toLowerCase();
+                const map = { arrowup: [0, -1], w: [0, -1], arrowdown: [0, 1], s: [0, 1], arrowleft: [-1, 0], a: [-1, 0], arrowright: [1, 0], d: [1, 0] };
+                if (map[k]) {
+                    e.preventDefault();
+                    const [x, y] = map[k];
+                    if (x !== -dir.x && y !== -dir.y) nextDir = { x, y };
+                }
+            }
+            // touch swipe
+            let tsx, tsy;
+            cv.addEventListener('touchstart', e => { tsx = e.touches[0].clientX; tsy = e.touches[0].clientY; }, { passive: true });
+            cv.addEventListener('touchend', e => {
+                const dx = e.changedTouches[0].clientX - tsx, dy = e.changedTouches[0].clientY - tsy;
+                if (Math.abs(dx) > Math.abs(dy)) { if (dx > 0 && dir.x !== -1) nextDir = { x: 1, y: 0 }; else if (dx < 0 && dir.x !== 1) nextDir = { x: -1, y: 0 }; }
+                else { if (dy > 0 && dir.y !== -1) nextDir = { x: 0, y: 1 }; else if (dy < 0 && dir.y !== 1) nextDir = { x: 0, y: -1 }; }
+            }, { passive: true });
+            document.addEventListener('keydown', key);
+            reset();
+            return () => { clearTimeout(timer); document.removeEventListener('keydown', key); };
+        };
+
+        /* ---------- 2048 ---------- */
+        GAMES.g2048 = function (root) {
+            const { mount } = stage(root, {
+                scores: [{ label: 'Score', id: 'g-score', value: '0' }, { label: 'Best', id: 'g-best', value: store.get('hs_g2048', 0) }],
+                hint: 'Arrow keys / WASD or swipe • merge to 2048',
+                controls: [{ label: '<i class="fas fa-redo"></i> New Game', onClick: () => reset() }]
             });
-            
-            // Header scroll effect
-            const header = document.querySelector('header');
-            window.addEventListener('scroll', function() {
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
+            const grid = document.createElement('div'); grid.className = 'g2048'; mount.appendChild(grid);
+            let board, score, cells = [];
+            for (let i = 0; i < 16; i++) { const t = document.createElement('div'); t.className = 'tile'; grid.appendChild(t); cells.push(t); }
+
+            function reset() { board = Array(16).fill(0); score = 0; add(); add(); render(true); $('#g-score').textContent = 0; }
+            function add() {
+                const empty = board.map((v, i) => v === 0 ? i : -1).filter(i => i >= 0);
+                if (!empty.length) return;
+                const i = empty[Math.random() * empty.length | 0];
+                board[i] = Math.random() < 0.9 ? 2 : 4;
+                cells[i].dataset.spawn = '1';
+            }
+            function render() {
+                board.forEach((v, i) => {
+                    const t = cells[i];
+                    t.textContent = v || '';
+                    t.className = 'tile' + (v ? ' t' + v : '');
+                    if (t.dataset.spawn) { t.classList.add('spawn'); delete t.dataset.spawn; }
+                });
+                $('#g-score').textContent = score;
+            }
+            function slide(row) {
+                let a = row.filter(v => v);
+                for (let i = 0; i < a.length - 1; i++) if (a[i] === a[i + 1]) { a[i] *= 2; score += a[i]; a[i + 1] = 0; }
+                a = a.filter(v => v); while (a.length < 4) a.push(0);
+                return a;
+            }
+            function move(dir) {
+                const before = board.join(',');
+                let rows = [];
+                for (let r = 0; r < 4; r++) {
+                    let line = [];
+                    for (let cI = 0; cI < 4; cI++) {
+                        let idx;
+                        if (dir === 'left') idx = r * 4 + cI;
+                        else if (dir === 'right') idx = r * 4 + (3 - cI);
+                        else if (dir === 'up') idx = cI * 4 + r;
+                        else idx = (3 - cI) * 4 + r;
+                        line.push(board[idx]);
+                    }
+                    line = slide(line);
+                    for (let cI = 0; cI < 4; cI++) {
+                        let idx;
+                        if (dir === 'left') idx = r * 4 + cI;
+                        else if (dir === 'right') idx = r * 4 + (3 - cI);
+                        else if (dir === 'up') idx = cI * 4 + r;
+                        else idx = (3 - cI) * 4 + r;
+                        board[idx] = line[cI];
+                    }
+                }
+                if (board.join(',') !== before) {
+                    add(); render();
+                    const best = store.get('hs_g2048', 0);
+                    if (score > best) { store.set('hs_g2048', score); $('#g-best').textContent = score; }
+                    if (board.includes(2048) && !won) { won = true; toast('🎉 You made 2048!'); }
+                    if (isOver()) setTimeout(() => toast('No moves left — New Game to retry'), 200);
+                }
+            }
+            let won = false;
+            function isOver() {
+                if (board.includes(0)) return false;
+                for (let r = 0; r < 4; r++) for (let cI = 0; cI < 4; cI++) {
+                    const v = board[r * 4 + cI];
+                    if (cI < 3 && v === board[r * 4 + cI + 1]) return false;
+                    if (r < 3 && v === board[(r + 1) * 4 + cI]) return false;
+                }
+                return true;
+            }
+            function key(e) {
+                const m = { arrowleft: 'left', a: 'left', arrowright: 'right', d: 'right', arrowup: 'up', w: 'up', arrowdown: 'down', s: 'down' };
+                const dir = m[e.key.toLowerCase()];
+                if (dir) { e.preventDefault(); move(dir); }
+            }
+            let tsx, tsy;
+            grid.addEventListener('touchstart', e => { tsx = e.touches[0].clientX; tsy = e.touches[0].clientY; }, { passive: true });
+            grid.addEventListener('touchend', e => {
+                const dx = e.changedTouches[0].clientX - tsx, dy = e.changedTouches[0].clientY - tsy;
+                if (Math.max(Math.abs(dx), Math.abs(dy)) < 24) return;
+                if (Math.abs(dx) > Math.abs(dy)) move(dx > 0 ? 'right' : 'left'); else move(dy > 0 ? 'down' : 'up');
+            }, { passive: true });
+            document.addEventListener('keydown', key);
+            reset();
+            return () => document.removeEventListener('keydown', key);
+        };
+
+        /* ---------- BREAKOUT ---------- */
+        GAMES.breakout = function (root) {
+            const W = 440, H = 380;
+            const { mount } = stage(root, {
+                scores: [{ label: 'Score', id: 'b-score', value: '0' }, { label: 'Lives', id: 'b-lives', value: '3' }, { label: 'Best', id: 'b-best', value: store.get('hs_breakout', 0) }],
+                hint: 'Move paddle with mouse or ← → • clear all bricks',
+                controls: [{ label: '<i class="fas fa-redo"></i> Restart', onClick: () => reset() }]
+            });
+            const cv = document.createElement('canvas'); cv.className = 'game-canvas'; cv.width = W; cv.height = H; mount.appendChild(cv);
+            const c = cv.getContext('2d');
+            const PW = 82, PH = 12, BR = 7, COLS = 8, ROWS = 5, BW = 46, BH = 18, GAP = 6, OFF = (W - (COLS * (BW + GAP) - GAP)) / 2;
+            let px, ball, bricks, score, lives, anim, running, keyL, keyR;
+
+            function reset() {
+                px = W / 2 - PW / 2; score = 0; lives = 3; running = true; keyL = keyR = false;
+                $('#b-score').textContent = 0; $('#b-lives').textContent = 3;
+                bricks = [];
+                for (let r = 0; r < ROWS; r++) for (let cI = 0; cI < COLS; cI++)
+                    bricks.push({ x: OFF + cI * (BW + GAP), y: 46 + r * (BH + GAP), alive: true, hue: 260 + r * 12 });
+                launch();
+                cancelAnimationFrame(anim); loop();
+            }
+            function launch() { ball = { x: W / 2, y: H - 40, vx: (Math.random() < .5 ? -1 : 1) * 3, vy: -3.4, r: BR }; }
+            function loop() {
+                if (keyL) px -= 7; if (keyR) px += 7;
+                px = Math.max(0, Math.min(W - PW, px));
+                ball.x += ball.vx; ball.y += ball.vy;
+                if (ball.x < BR || ball.x > W - BR) ball.vx *= -1;
+                if (ball.y < BR) ball.vy *= -1;
+                // paddle
+                if (ball.y + BR >= H - 22 && ball.y + BR <= H - 8 && ball.x > px && ball.x < px + PW && ball.vy > 0) {
+                    const hit = (ball.x - (px + PW / 2)) / (PW / 2);
+                    const ang = hit * 1.05; const sp = Math.min(6.2, Math.hypot(ball.vx, ball.vy) + 0.08);
+                    ball.vx = sp * Math.sin(ang); ball.vy = -Math.abs(sp * Math.cos(ang));
+                }
+                // bricks
+                for (const b of bricks) {
+                    if (!b.alive) continue;
+                    if (ball.x > b.x && ball.x < b.x + BW && ball.y - BR < b.y + BH && ball.y + BR > b.y) {
+                        b.alive = false; ball.vy *= -1; score += 10; $('#b-score').textContent = score;
+                        if (bricks.every(k => !k.alive)) { win(); return; }
+                        break;
+                    }
+                }
+                // lose life
+                if (ball.y - BR > H) {
+                    lives--; $('#b-lives').textContent = lives;
+                    if (lives <= 0) { over(false); return; } else launch();
+                }
+                draw();
+                anim = requestAnimationFrame(loop);
+            }
+            function draw() {
+                c.fillStyle = '#0a0614'; c.fillRect(0, 0, W, H);
+                bricks.forEach(b => { if (!b.alive) return;
+                    c.fillStyle = 'hsl(' + b.hue + ',75%,60%)'; c.shadowColor = 'hsl(' + b.hue + ',75%,60%)'; c.shadowBlur = 8;
+                    c.fillRect(b.x, b.y, BW, BH); });
+                c.shadowBlur = 0;
+                c.fillStyle = '#c084fc'; c.shadowColor = '#a855f7'; c.shadowBlur = 14;
+                c.fillRect(px, H - 22, PW, PH);
+                c.beginPath(); c.arc(ball.x, ball.y, BR, 0, 7); c.fillStyle = '#f0abfc'; c.fill();
+                c.shadowBlur = 0;
+            }
+            function finish(msg, sub) {
+                running = false; cancelAnimationFrame(anim);
+                const best = store.get('hs_breakout', 0);
+                if (score > best) { store.set('hs_breakout', score); $('#b-best').textContent = score; toast('🏆 New best: ' + score + '!'); }
+                c.fillStyle = 'rgba(7,5,13,0.85)'; c.fillRect(0, 0, W, H);
+                c.fillStyle = '#fff'; c.textAlign = 'center'; c.font = '700 30px Inter, sans-serif'; c.fillText(msg, W / 2, H / 2 - 8);
+                c.font = '500 15px Inter, sans-serif'; c.fillStyle = '#a99fc7'; c.fillText(sub, W / 2, H / 2 + 22);
+            }
+            function over() { finish('Game Over', 'Score ' + score + ' — press Restart'); }
+            function win() { finish('You Win! 🎉', 'Score ' + score + ' — Restart to replay'); }
+            function move(e) { const rect = cv.getBoundingClientRect(); px = (e.clientX - rect.left) * (W / rect.width) - PW / 2; }
+            function kd(e) { if (e.key === 'ArrowLeft') keyL = true; if (e.key === 'ArrowRight') keyR = true; }
+            function ku(e) { if (e.key === 'ArrowLeft') keyL = false; if (e.key === 'ArrowRight') keyR = false; }
+            cv.addEventListener('mousemove', move);
+            cv.addEventListener('touchmove', e => { move(e.touches[0]); e.preventDefault(); }, { passive: false });
+            document.addEventListener('keydown', kd); document.addEventListener('keyup', ku);
+            reset();
+            return () => { cancelAnimationFrame(anim); cv.removeEventListener('mousemove', move); document.removeEventListener('keydown', kd); document.removeEventListener('keyup', ku); };
+        };
+
+        /* ---------- MEMORY MATCH ---------- */
+        GAMES.memory = function (root) {
+            const { mount } = stage(root, {
+                scores: [{ label: 'Moves', id: 'm-moves', value: '0' }, { label: 'Pairs', id: 'm-pairs', value: '0/8' }, { label: 'Best', id: 'm-best', value: store.get('hs_memory', 0) || '—' }],
+                hint: 'Flip two cards — match all 8 pairs in as few moves as possible',
+                controls: [{ label: '<i class="fas fa-redo"></i> Shuffle', onClick: () => reset() }]
+            });
+            const grid = document.createElement('div'); grid.className = 'memory-grid'; mount.appendChild(grid);
+            const EMO = ['🎮', '👾', '🚀', '💜', '⚡', '🔥', '🌙', '⭐'];
+            let deck, first, lock, moves, pairs;
+
+            function reset() {
+                deck = [...EMO, ...EMO].map(e => ({ e, matched: false })).sort(() => Math.random() - 0.5);
+                first = null; lock = false; moves = 0; pairs = 0;
+                $('#m-moves').textContent = 0; $('#m-pairs').textContent = '0/8';
+                grid.innerHTML = '';
+                deck.forEach((card, i) => {
+                    const el = document.createElement('div'); el.className = 'mem-card';
+                    el.innerHTML = '<div class="mem-inner"><div class="mem-face mem-front"><i class="fas fa-question"></i></div><div class="mem-face mem-back">' + card.e + '</div></div>';
+                    el.addEventListener('click', () => flip(i, el));
+                    grid.appendChild(el); card.el = el;
+                });
+            }
+            function flip(i, el) {
+                if (lock || deck[i].matched || el.classList.contains('flipped')) return;
+                el.classList.add('flipped');
+                if (!first) { first = i; return; }
+                moves++; $('#m-moves').textContent = moves;
+                if (deck[first].e === deck[i].e) {
+                    deck[first].matched = deck[i].matched = true;
+                    deck[first].el.classList.add('matched'); el.classList.add('matched');
+                    first = null; pairs++; $('#m-pairs').textContent = pairs + '/8';
+                    if (pairs === 8) done();
                 } else {
-                    header.classList.remove('scrolled');
+                    lock = true;
+                    const f = first; first = null;
+                    setTimeout(() => { deck[f].el.classList.remove('flipped'); el.classList.remove('flipped'); lock = false; }, 700);
+                }
+            }
+            function done() {
+                const best = store.get('hs_memory', 0);
+                if (!best || moves < best) { store.set('hs_memory', moves); $('#m-best').textContent = moves; toast('🏆 New record: ' + moves + ' moves!'); }
+                else toast('🎉 Solved in ' + moves + ' moves!');
+            }
+            reset();
+            return () => {};
+        };
+
+        /* ---------- REACTION ---------- */
+        GAMES.reaction = function (root) {
+            const { mount } = stage(root, {
+                scores: [{ label: 'Last', id: 'r-last', value: '—' }, { label: 'Best', id: 'r-best', value: store.get('hs_reaction', 0) || '—' }],
+                hint: 'Click when the box turns <b>purple</b>. Too early = restart.'
+            });
+            const box = document.createElement('div'); box.className = 'reaction-box rx-idle'; box.style.width = '100%';
+            box.textContent = 'Click to start'; mount.appendChild(box); mount.style.width = '100%';
+            let state = 'idle', t0, timer;
+            function setBox(cls, txt) { box.className = 'reaction-box ' + cls; box.textContent = txt; }
+            box.addEventListener('click', () => {
+                if (state === 'idle' || state === 'result') {
+                    state = 'wait'; setBox('rx-wait', 'Wait for purple…');
+                    timer = setTimeout(() => { state = 'ready'; t0 = performance.now(); setBox('rx-ready', 'CLICK!'); }, 1200 + Math.random() * 2600);
+                } else if (state === 'wait') {
+                    clearTimeout(timer); state = 'result'; setBox('rx-result', 'Too soon! 😅 Click to retry');
+                } else if (state === 'ready') {
+                    const ms = Math.round(performance.now() - t0); state = 'result';
+                    $('#r-last').textContent = ms; setBox('rx-result', ms + ' ms — click to go again');
+                    const best = store.get('hs_reaction', 0);
+                    if (!best || ms < best) { store.set('hs_reaction', ms); $('#r-best').textContent = ms; toast('⚡ New best: ' + ms + ' ms!'); }
                 }
             });
-            
-            // Navigation active state on scroll
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            function onScroll() {
-                let current = '';
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    
-                    if (scrollY >= (sectionTop - 200)) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href').substring(1) === current) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-            
-            window.addEventListener('scroll', onScroll);
-            
-            // Reveal animations for project cards
-            const projectCards = document.querySelectorAll('.project-card');
-            
-            function revealCards() {
-                const triggerBottom = window.innerHeight * 0.9;
-                
-                projectCards.forEach((card, index) => {
-                    const cardTop = card.getBoundingClientRect().top;
-                    
-                    if (cardTop < triggerBottom) {
-                        setTimeout(() => {
-                            card.classList.add('reveal');
-                        }, index * 100);
-                    }
-                });
-            }
-            
-            window.addEventListener('scroll', revealCards);
-            // Initial call to reveal cards that are already in viewport
-            revealCards();
-            
-            // Smooth scrolling for all internal links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    if (targetElement) {
-                        const offsetTop = targetElement.offsetTop - 80;
-                        
-                        window.scrollTo({
-                            top: offsetTop,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
+            return () => clearTimeout(timer);
+        };
+
+        /* ---------- TETRIS ---------- */
+        GAMES.tetris = function (root) {
+            const COLS = 10, ROWS = 20, CELL = 18, W = COLS * CELL, H = ROWS * CELL;
+            const { mount } = stage(root, {
+                scores: [{ label: 'Score', id: 't-score', value: '0' }, { label: 'Lines', id: 't-lines', value: '0' }, { label: 'Best', id: 't-best', value: store.get('hs_tetris', 0) }],
+                hint: '← → move • ↑ rotate • ↓ soft drop • space hard drop',
+                controls: [{ label: '<i class="fas fa-redo"></i> Restart', onClick: () => reset() }]
             });
+            const cv = document.createElement('canvas'); cv.className = 'game-canvas'; cv.width = W; cv.height = H; mount.appendChild(cv);
+            const c = cv.getContext('2d');
+            const SHAPES = { I: [[1, 1, 1, 1]], O: [[1, 1], [1, 1]], T: [[0, 1, 0], [1, 1, 1]], S: [[0, 1, 1], [1, 1, 0]], Z: [[1, 1, 0], [0, 1, 1]], J: [[1, 0, 0], [1, 1, 1]], L: [[0, 0, 1], [1, 1, 1]] };
+            const COL = { I: '#c084fc', O: '#e879f9', T: '#a855f7', S: '#d946ef', Z: '#9333ea', J: '#7c3aed', L: '#c026d3' };
+            const keys = Object.keys(SHAPES);
+            let board, cur, px, py, score, lines, dead, drop, lastT, anim;
+            function newPiece() { const k = keys[Math.random() * keys.length | 0]; cur = { k, m: SHAPES[k].map(r => [...r]) }; px = (COLS >> 1) - (cur.m[0].length >> 1); py = 0; if (collide(px, py, cur.m)) dead = true; }
+            function collide(nx, ny, m) { for (let y = 0; y < m.length; y++) for (let x = 0; x < m[y].length; x++) { if (!m[y][x]) continue; const bx = nx + x, by = ny + y; if (bx < 0 || bx >= COLS || by >= ROWS) return true; if (by >= 0 && board[by][bx]) return true; } return false; }
+            function rotate(m) { const R = m.length, C = m[0].length, n = Array.from({ length: C }, () => Array(R).fill(0)); for (let y = 0; y < R; y++) for (let x = 0; x < C; x++) n[x][R - 1 - y] = m[y][x]; return n; }
+            function merge() { cur.m.forEach((r, y) => r.forEach((v, x) => { if (v && py + y >= 0) board[py + y][px + x] = COL[cur.k]; })); }
+            function clearLines() { let cl = 0; for (let y = ROWS - 1; y >= 0; y--) { if (board[y].every(v => v)) { board.splice(y, 1); board.unshift(Array(COLS).fill(0)); cl++; y++; } } if (cl) { lines += cl; score += [0, 100, 300, 500, 800][cl] * (Math.floor(lines / 10) + 1); $('#t-score').textContent = score; $('#t-lines').textContent = lines; drop = Math.max(120, 500 - Math.floor(lines / 10) * 40); } }
+            function lock() { merge(); clearLines(); newPiece(); }
+            function reset() { board = Array.from({ length: ROWS }, () => Array(COLS).fill(0)); score = 0; lines = 0; dead = false; drop = 500; lastT = 0; $('#t-score').textContent = 0; $('#t-lines').textContent = 0; newPiece(); cancelAnimationFrame(anim); anim = requestAnimationFrame(tick); }
+            function cell(x, y, col) { if (y < 0) return; c.fillStyle = col; c.shadowColor = col; c.shadowBlur = 6; c.fillRect(x * CELL + 1, y * CELL + 1, CELL - 2, CELL - 2); c.shadowBlur = 0; }
+            function draw() { c.fillStyle = '#0a0614'; c.fillRect(0, 0, W, H); for (let y = 0; y < ROWS; y++) for (let x = 0; x < COLS; x++) if (board[y][x]) cell(x, y, board[y][x]); if (cur) cur.m.forEach((r, y) => r.forEach((v, x) => { if (v) cell(px + x, py + y, COL[cur.k]); })); }
+            function tick(t) { if (dead) { over(); return; } if (!lastT) lastT = t; if (t - lastT > drop) { if (!collide(px, py + 1, cur.m)) py++; else lock(); lastT = t; } draw(); anim = requestAnimationFrame(tick); }
+            function over() { cancelAnimationFrame(anim); const best = store.get('hs_tetris', 0); if (score > best) { store.set('hs_tetris', score); $('#t-best').textContent = score; toast('🏆 New best: ' + score + '!'); } c.fillStyle = 'rgba(7,5,13,0.85)'; c.fillRect(0, 0, W, H); c.fillStyle = '#fff'; c.textAlign = 'center'; c.font = '700 24px Inter, sans-serif'; c.fillText('Game Over', W / 2, H / 2 - 8); c.font = '500 14px Inter, sans-serif'; c.fillStyle = '#a99fc7'; c.fillText('Score ' + score + ' — Restart', W / 2, H / 2 + 18); }
+            function key(e) {
+                if (dead) return; const k = e.key;
+                if (k === 'ArrowLeft') { if (!collide(px - 1, py, cur.m)) px--; e.preventDefault(); }
+                else if (k === 'ArrowRight') { if (!collide(px + 1, py, cur.m)) px++; e.preventDefault(); }
+                else if (k === 'ArrowDown') { if (!collide(px, py + 1, cur.m)) py++; e.preventDefault(); }
+                else if (k === 'ArrowUp' || k.toLowerCase() === 'x') { const r = rotate(cur.m); if (!collide(px, py, r)) cur.m = r; else if (!collide(px - 1, py, r)) { px--; cur.m = r; } else if (!collide(px + 1, py, r)) { px++; cur.m = r; } e.preventDefault(); }
+                else if (k === ' ') { while (!collide(px, py + 1, cur.m)) py++; lock(); e.preventDefault(); }
+            }
+            document.addEventListener('keydown', key);
+            reset();
+            return () => { cancelAnimationFrame(anim); document.removeEventListener('keydown', key); };
+        };
+
+        /* ---------- FLAPPY ---------- */
+        GAMES.flappy = function (root) {
+            const W = 320, H = 420;
+            const { mount } = stage(root, {
+                scores: [{ label: 'Score', id: 'f-score', value: '0' }, { label: 'Best', id: 'f-best', value: store.get('hs_flappy', 0) }],
+                hint: 'Click / tap / space to flap • dodge the pipes'
+            });
+            const cv = document.createElement('canvas'); cv.className = 'game-canvas'; cv.width = W; cv.height = H; mount.appendChild(cv);
+            const c = cv.getContext('2d');
+            const GRAV = 0.5, FLAP = -7.4, GAP = 135, PW = 52, SPD = 2.4, BX = 78, BR = 13;
+            let bird, pipes, score, dead, started, anim;
+            function reset() { bird = { y: H / 2, v: 0 }; pipes = []; score = 0; dead = false; started = false; spawn(); $('#f-score').textContent = 0; cancelAnimationFrame(anim); loop(); }
+            function spawn() { const top = 40 + Math.random() * (H - GAP - 120); pipes.push({ x: W, top, passed: false }); }
+            function flap() { if (dead) { reset(); return; } started = true; bird.v = FLAP; }
+            function die() { if (dead) return; dead = true; const best = store.get('hs_flappy', 0); if (score > best) { store.set('hs_flappy', score); $('#f-best').textContent = score; toast('🏆 New best: ' + score + '!'); } }
+            function loop() {
+                c.fillStyle = '#0a0614'; c.fillRect(0, 0, W, H);
+                if (started) { bird.v += GRAV; bird.y += bird.v; if (pipes.length === 0 || pipes[pipes.length - 1].x < W - 165) spawn(); pipes.forEach(p => p.x -= SPD); pipes = pipes.filter(p => p.x > -PW); }
+                pipes.forEach(p => {
+                    c.fillStyle = '#a855f7'; c.shadowColor = '#a855f7'; c.shadowBlur = 8;
+                    c.fillRect(p.x, 0, PW, p.top); c.fillRect(p.x, p.top + GAP, PW, H - p.top - GAP); c.shadowBlur = 0;
+                    if (!p.passed && p.x + PW < BX) { p.passed = true; score++; $('#f-score').textContent = score; }
+                    if (BX + BR > p.x && BX - BR < p.x + PW && (bird.y - BR < p.top || bird.y + BR > p.top + GAP)) die();
+                });
+                if (bird.y > H - BR || bird.y < BR) die();
+                c.save(); c.translate(BX, bird.y); c.rotate(Math.max(-0.4, Math.min(0.8, bird.v * 0.05)));
+                c.fillStyle = '#f0abfc'; c.shadowColor = '#e879f9'; c.shadowBlur = 12; c.beginPath(); c.arc(0, 0, BR, 0, 7); c.fill();
+                c.fillStyle = '#1a0a2e'; c.beginPath(); c.arc(5, -4, 2.5, 0, 7); c.fill(); c.restore(); c.shadowBlur = 0;
+                c.fillStyle = '#fff'; c.textAlign = 'center';
+                if (!started) { c.font = '600 16px Inter, sans-serif'; c.fillText('Click / Space to start', W / 2, H / 2 - 50); }
+                if (dead) { c.fillStyle = 'rgba(7,5,13,0.82)'; c.fillRect(0, 0, W, H); c.fillStyle = '#fff'; c.font = '700 26px Inter, sans-serif'; c.fillText('Game Over', W / 2, H / 2 - 8); c.font = '500 14px Inter, sans-serif'; c.fillStyle = '#a99fc7'; c.fillText('Score ' + score + ' — click to retry', W / 2, H / 2 + 18); return; }
+                anim = requestAnimationFrame(loop);
+            }
+            function key(e) { if (e.key === ' ' || e.key === 'ArrowUp') { e.preventDefault(); flap(); } }
+            cv.addEventListener('mousedown', flap);
+            cv.addEventListener('touchstart', e => { e.preventDefault(); flap(); }, { passive: false });
+            document.addEventListener('keydown', key);
+            reset();
+            return () => { cancelAnimationFrame(anim); document.removeEventListener('keydown', key); };
+        };
+
+        /* ---------- MINESWEEPER ---------- */
+        GAMES.mines = function (root) {
+            const N = 9, MINES = 10;
+            const { mount } = stage(root, {
+                scores: [{ label: 'Mines', id: 'ms-mines', value: MINES }, { label: 'Time', id: 'ms-time', value: '0' }, { label: 'Best', id: 'ms-best', value: store.get('hs_mines', 0) || '—' }],
+                hint: 'Left-click reveal • right-click flag • clear all safe cells',
+                controls: [{ label: '<i class="fas fa-redo"></i> New Board', onClick: () => reset() }]
+            });
+            const grid = document.createElement('div'); grid.style.cssText = 'display:grid;grid-template-columns:repeat(' + N + ',32px);gap:3px;user-select:none;'; mount.appendChild(grid);
+            let cells, revealed, flags, started, timer, secs, done;
+            function reset() {
+                grid.innerHTML = ''; cells = []; revealed = 0; flags = 0; started = false; done = false; secs = 0; clearInterval(timer);
+                $('#ms-time').textContent = 0; $('#ms-mines').textContent = MINES;
+                for (let i = 0; i < N * N; i++) {
+                    const b = document.createElement('button');
+                    b.style.cssText = 'width:32px;height:32px;border-radius:6px;border:1px solid var(--line);background:var(--card-hi);color:#fff;font-weight:700;cursor:pointer;font-size:15px;';
+                    b.addEventListener('click', () => reveal(i));
+                    b.addEventListener('contextmenu', e => { e.preventDefault(); flag(i); });
+                    grid.appendChild(b); cells.push({ el: b, mine: false, rev: false, flag: false, n: 0 });
+                }
+            }
+            function neighbors(i) { const r = i / N | 0, cc = i % N, out = []; for (let dr = -1; dr <= 1; dr++) for (let dc = -1; dc <= 1; dc++) { if (!dr && !dc) continue; const nr = r + dr, nc = cc + dc; if (nr >= 0 && nr < N && nc >= 0 && nc < N) out.push(nr * N + nc); } return out; }
+            function place(first) { let p = 0; while (p < MINES) { const i = Math.random() * N * N | 0; if (i === first || cells[i].mine) continue; cells[i].mine = true; p++; } cells.forEach((c, i) => { if (!c.mine) c.n = neighbors(i).filter(j => cells[j].mine).length; }); }
+            function reveal(i) { if (done) return; const c = cells[i]; if (c.rev || c.flag) return; if (!started) { started = true; place(i); timer = setInterval(() => { secs++; $('#ms-time').textContent = secs; }, 1000); } if (c.mine) { c.rev = true; c.el.textContent = '💣'; c.el.style.background = '#5a1020'; return lose(); } flood(i); if (revealed === N * N - MINES) win(); }
+            function flood(i) { const c = cells[i]; if (c.rev || c.flag || c.mine) return; c.rev = true; revealed++; c.el.style.background = '#160c28'; c.el.style.cursor = 'default'; if (c.n) { c.el.textContent = c.n; const cols = ['', '#c084fc', '#e879f9', '#d946ef', '#a855f7', '#f0abfc', '#9333ea', '#7c3aed', '#c026d3']; c.el.style.color = cols[c.n]; } else { c.el.textContent = ''; neighbors(i).forEach(flood); } }
+            function flag(i) { if (done) return; const c = cells[i]; if (c.rev) return; c.flag = !c.flag; c.el.textContent = c.flag ? '🚩' : ''; flags += c.flag ? 1 : -1; $('#ms-mines').textContent = MINES - flags; }
+            function lose() { done = true; clearInterval(timer); cells.forEach(c => { if (c.mine && !c.rev) c.el.textContent = '💣'; }); toast('💥 Boom! Hit a mine — New Board to retry'); }
+            function win() { done = true; clearInterval(timer); const best = store.get('hs_mines', 0); if (!best || secs < best) { store.set('hs_mines', secs); $('#ms-best').textContent = secs; toast('🏆 New best time: ' + secs + 's!'); } else toast('🎉 Cleared in ' + secs + 's!'); }
+            reset();
+            return () => clearInterval(timer);
+        };
+
+        /* ---------- TIC-TAC-TOE (unbeatable minimax) ---------- */
+        GAMES.ttt = function (root) {
+            const { mount } = stage(root, {
+                scores: [{ label: 'You (X)', id: 'tt-w', value: store.get('ttt_w', 0) }, { label: 'Draws', id: 'tt-d', value: store.get('ttt_d', 0) }, { label: 'CPU (O)', id: 'tt-l', value: store.get('ttt_l', 0) }],
+                hint: "You are X vs a perfect AI. A draw is the best you can get!",
+                controls: [{ label: '<i class="fas fa-redo"></i> New Round', onClick: () => reset() }]
+            });
+            const grid = document.createElement('div'); grid.style.cssText = 'display:grid;grid-template-columns:repeat(3,84px);gap:8px;'; mount.appendChild(grid);
+            const WINS = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
+            let b, cells, locked;
+            function reset() { b = Array(9).fill(''); locked = false; grid.innerHTML = ''; cells = []; for (let i = 0; i < 9; i++) { const el = document.createElement('button'); el.style.cssText = 'width:84px;height:84px;font-size:2.4rem;font-weight:800;border-radius:12px;border:1px solid var(--line);background:var(--card-hi);color:#fff;cursor:pointer;'; el.onclick = () => play(i); grid.appendChild(el); cells.push(el); } }
+            function render() { b.forEach((v, i) => { cells[i].textContent = v; cells[i].style.color = v === 'X' ? '#f0abfc' : '#a855f7'; }); }
+            function winner(bd) { for (const [a, c, d] of WINS) if (bd[a] && bd[a] === bd[c] && bd[a] === bd[d]) return bd[a]; return null; }
+            function play(i) { if (locked || b[i]) return; b[i] = 'X'; render(); let w = winner(b); if (w) return end(w); if (b.every(v => v)) return end('draw'); locked = true; setTimeout(() => { const m = bestMove(); b[m] = 'O'; render(); w = winner(b); if (w) return end(w); if (b.every(v => v)) return end('draw'); locked = false; }, 260); }
+            function bestMove() { let bs = -Infinity, mv = -1; for (let i = 0; i < 9; i++) if (!b[i]) { b[i] = 'O'; const s = mini(0, false); b[i] = ''; if (s > bs) { bs = s; mv = i; } } return mv; }
+            function mini(depth, isMax) { const w = winner(b); if (w === 'O') return 10 - depth; if (w === 'X') return depth - 10; if (b.every(v => v)) return 0; if (isMax) { let best = -Infinity; for (let i = 0; i < 9; i++) if (!b[i]) { b[i] = 'O'; best = Math.max(best, mini(depth + 1, false)); b[i] = ''; } return best; } else { let best = Infinity; for (let i = 0; i < 9; i++) if (!b[i]) { b[i] = 'X'; best = Math.min(best, mini(depth + 1, true)); b[i] = ''; } return best; } }
+            function end(res) { locked = true; if (res === 'X') { const w = store.get('ttt_w', 0) + 1; store.set('ttt_w', w); $('#tt-w').textContent = w; toast('🎉 You won! (how?!)'); } else if (res === 'O') { const l = store.get('ttt_l', 0) + 1; store.set('ttt_l', l); $('#tt-l').textContent = l; toast('🤖 AI wins'); } else { const d = store.get('ttt_d', 0) + 1; store.set('ttt_d', d); $('#tt-d').textContent = d; toast('🤝 Draw — nicely done'); } }
+            reset();
+            return () => {};
+        };
+
+        /* ---------- SIMON SAYS ---------- */
+        GAMES.simon = function (root) {
+            const { mount } = stage(root, {
+                scores: [{ label: 'Level', id: 'si-lvl', value: '0' }, { label: 'Best', id: 'si-best', value: store.get('hs_simon', 0) }],
+                hint: 'Watch the pattern, then repeat it. It grows each round.',
+                controls: [{ label: '<i class="fas fa-play"></i> Start', onClick: () => start() }]
+            });
+            const box = document.createElement('div'); box.style.cssText = 'display:grid;grid-template-columns:repeat(2,90px);gap:12px;'; mount.appendChild(box);
+            const CC = [{ on: '#f0abfc', off: '#6d28d9', f: 330 }, { on: '#e879f9', off: '#7c3aed', f: 392 }, { on: '#c084fc', off: '#9333ea', f: 262 }, { on: '#d946ef', off: '#a855f7', f: 494 }];
+            const pads = CC.map((cc, i) => { const p = document.createElement('button'); p.style.cssText = 'width:90px;height:90px;border-radius:16px;border:1px solid var(--line);background:' + cc.off + ';cursor:pointer;transition:background .1s;'; p.onclick = () => press(i); box.appendChild(p); return p; });
+            let seq, input, playing, AC, actx;
+            function beep(f, d) { try { AC = AC || window.AudioContext || window.webkitAudioContext; actx = actx || new AC(); const o = actx.createOscillator(), g = actx.createGain(); o.frequency.value = f; o.type = 'sine'; o.connect(g); g.connect(actx.destination); g.gain.value = 0.05; o.start(); o.stop(actx.currentTime + (d || 0.25)); } catch {} }
+            function light(i) { pads[i].style.background = CC[i].on; beep(CC[i].f); setTimeout(() => pads[i].style.background = CC[i].off, 300); }
+            function start() { seq = []; input = 0; playing = false; $('#si-lvl').textContent = 0; next(); }
+            function next() { input = 0; seq.push(Math.random() * 4 | 0); $('#si-lvl').textContent = seq.length; playing = false; let i = 0; const iv = setInterval(() => { if (i >= seq.length) { clearInterval(iv); playing = true; return; } light(seq[i]); i++; }, 650); }
+            function press(i) { if (!playing) return; light(i); if (seq[input] !== i) { playing = false; const best = store.get('hs_simon', 0), lvl = seq.length - 1; if (lvl > best) { store.set('hs_simon', lvl); $('#si-best').textContent = lvl; toast('🏆 New best: level ' + lvl + '!'); } else toast('❌ Wrong! Reached level ' + lvl); return; } input++; if (input === seq.length) { playing = false; setTimeout(next, 800); } }
+            return () => {};
+        };
+
+        /* ---------- WHACK-A-MOLE ---------- */
+        GAMES.whack = function (root) {
+            const { mount } = stage(root, {
+                scores: [{ label: 'Score', id: 'w-score', value: '0' }, { label: 'Time', id: 'w-time', value: '30' }, { label: 'Best', id: 'w-best', value: store.get('hs_whack', 0) }],
+                hint: 'Whack the moles! 30 seconds — they get faster.',
+                controls: [{ label: '<i class="fas fa-play"></i> Start', onClick: () => start() }]
+            });
+            const grid = document.createElement('div'); grid.style.cssText = 'display:grid;grid-template-columns:repeat(3,86px);gap:12px;'; mount.appendChild(grid);
+            const holes = Array.from({ length: 9 }, () => { const h = document.createElement('div'); h.style.cssText = 'width:86px;height:86px;border-radius:50%;background:var(--card-hi);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:2.4rem;cursor:pointer;overflow:hidden;'; grid.appendChild(h); return h; });
+            let score, time, active, running, moleTimer, clock;
+            function start() { if (running) return; score = 0; time = 30; running = true; active = -1; $('#w-score').textContent = 0; $('#w-time').textContent = 30; pop(); clock = setInterval(() => { time--; $('#w-time').textContent = time; if (time <= 0) end(); }, 1000); }
+            function pop() { holes.forEach(h => h.textContent = ''); active = Math.random() * 9 | 0; holes[active].textContent = '👾'; moleTimer = setTimeout(pop, Math.max(480, 900 - (30 - time) * 13)); }
+            holes.forEach((h, i) => h.addEventListener('click', () => { if (!running || i !== active) return; score++; $('#w-score').textContent = score; h.textContent = '💥'; active = -1; }));
+            function end() { running = false; clearTimeout(moleTimer); clearInterval(clock); holes.forEach(h => h.textContent = ''); const best = store.get('hs_whack', 0); if (score > best) { store.set('hs_whack', score); $('#w-best').textContent = score; toast('🏆 New best: ' + score + '!'); } else toast('⏰ Time! You whacked ' + score); }
+            return () => { clearTimeout(moleTimer); clearInterval(clock); running = false; };
+        };
+
+        /* ============ KONAMI EASTER EGG (bonus: Pong vs AI) ============ */
+        const konami = ['arrowup', 'arrowup', 'arrowdown', 'arrowdown', 'arrowleft', 'arrowright', 'arrowleft', 'arrowright', 'b', 'a'];
+        let kIdx = 0;
+        addEventListener('keydown', e => {
+            const k = e.key.toLowerCase();
+            kIdx = (k === konami[kIdx]) ? kIdx + 1 : (k === konami[0] ? 1 : 0);
+            if (kIdx === konami.length) { kIdx = 0; unlockSecret(); }
         });
+        function unlockSecret() {
+            toast('🎉 Secret unlocked: Pong vs AI!');
+            titles.pong = '🏓 Secret Pong (vs AI)';
+            const card = $('.game-card[data-game="secret"]');
+            if (card) { card.style.opacity = '1'; card.querySelector('h3').textContent = 'Secret Pong'; card.querySelector('.game-hs').textContent = 'Unlocked'; card.querySelector('.play-pill').innerHTML = 'Play <i class="fas fa-play"></i>'; card.dataset.game = 'pong'; }
+            GAMES.pong = pongGame;
+            openGame('pong');
+        }
+        function pongGame(rootEl) {
+            const W = 460, H = 300;
+            const { mount } = stage(rootEl, { scores: [{ label: 'You', id: 'p-you', value: '0' }, { label: 'CPU', id: 'p-cpu', value: '0' }], hint: 'Move mouse / drag to control your paddle • first to 5 wins' });
+            const cv = document.createElement('canvas'); cv.className = 'game-canvas'; cv.width = W; cv.height = H; mount.appendChild(cv);
+            const c = cv.getContext('2d');
+            let py = H / 2 - 30, ay = H / 2 - 30, ball, ys = 0, cs = 0, anim;
+            function serve(dir) { ball = { x: W / 2, y: H / 2, vx: dir * 4, vy: (Math.random() * 2 - 1) * 3 }; }
+            serve(Math.random() < .5 ? 1 : -1);
+            function loop() {
+                ball.x += ball.vx; ball.y += ball.vy;
+                if (ball.y < 6 || ball.y > H - 6) ball.vy *= -1;
+                // player paddle
+                if (ball.x < 20 && ball.y > py && ball.y < py + 60 && ball.vx < 0) { ball.vx = Math.abs(ball.vx) * 1.05; ball.vy += ((ball.y - (py + 30)) / 30) * 2; }
+                // ai paddle
+                if (ball.x > W - 20 && ball.y > ay && ball.y < ay + 60 && ball.vx > 0) { ball.vx = -Math.abs(ball.vx) * 1.05; ball.vy += ((ball.y - (ay + 30)) / 30) * 2; }
+                const tgt = ball.y - 30; ay += Math.max(-4.2, Math.min(4.2, (tgt - ay) * 0.12));
+                ay = Math.max(0, Math.min(H - 60, ay));
+                if (ball.x < 0) { cs++; $('#p-cpu').textContent = cs; serve(1); }
+                if (ball.x > W) { ys++; $('#p-you').textContent = ys; serve(-1); }
+                c.fillStyle = '#0a0614'; c.fillRect(0, 0, W, H);
+                c.setLineDash([6, 10]); c.strokeStyle = 'rgba(168,85,247,0.4)'; c.beginPath(); c.moveTo(W / 2, 0); c.lineTo(W / 2, H); c.stroke(); c.setLineDash([]);
+                c.fillStyle = '#c084fc'; c.shadowColor = '#a855f7'; c.shadowBlur = 12;
+                c.fillRect(8, py, 8, 60); c.fillRect(W - 16, ay, 8, 60);
+                c.beginPath(); c.arc(ball.x, ball.y, 6, 0, 7); c.fillStyle = '#f0abfc'; c.fill(); c.shadowBlur = 0;
+                if (ys >= 5 || cs >= 5) {
+                    c.fillStyle = 'rgba(7,5,13,0.85)'; c.fillRect(0, 0, W, H);
+                    c.fillStyle = '#fff'; c.textAlign = 'center'; c.font = '700 28px Inter, sans-serif';
+                    c.fillText(ys >= 5 ? 'You Win! 🎉' : 'CPU Wins 🤖', W / 2, H / 2);
+                    return;
+                }
+                anim = requestAnimationFrame(loop);
+            }
+            function move(e) { const r = cv.getBoundingClientRect(); py = (e.clientY - r.top) * (H / r.height) - 30; py = Math.max(0, Math.min(H - 60, py)); }
+            cv.addEventListener('mousemove', move);
+            cv.addEventListener('touchmove', e => { move(e.touches[0]); e.preventDefault(); }, { passive: false });
+            loop();
+            return () => { cancelAnimationFrame(anim); cv.removeEventListener('mousemove', move); };
+        }
+
+        /* Deep-link: #play=snake opens a game */
+        if (location.hash.startsWith('#play=')) { const g = location.hash.slice(6); if (GAMES[g]) setTimeout(() => openGame(g), 300); }
+    })();
     </script>
+
+    <!-- ============ Cloudflare Web Analytics ============
+         Free, privacy-first, no cookie banner needed. Works even though your
+         domain is registered at Squarespace (this is the "manual" JS setup).
+         1. Sign up free at https://www.cloudflare.com/web-analytics/
+         2. Add site "haithemharaga.com", copy the token it gives you
+         3. Replace YOUR_CLOUDFLARE_TOKEN below with that token, then uncomment.
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon='{"token": "YOUR_CLOUDFLARE_TOKEN"}'></script>
+    -->
 </body>
 </html>
